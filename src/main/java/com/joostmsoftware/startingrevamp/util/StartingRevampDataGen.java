@@ -12,6 +12,7 @@ import org.jetbrains.annotations.NotNull;
 import static com.joostmsoftware.startingrevamp.StartingRevamp.GROUP;
 import static com.joostmsoftware.startingrevamp.item.StartingRevampItems.ROCK;
 import static com.joostmsoftware.startingrevamp.item.StartingRevampItems.TWIG;
+import static com.joostmsoftware.startingrevamp.item.StartingRevampToolItems.*;
 
 public class StartingRevampDataGen implements DataGeneratorEntrypoint {
     @Override
@@ -30,6 +31,11 @@ public class StartingRevampDataGen implements DataGeneratorEntrypoint {
         public void generateTranslations(TranslationBuilder translationBuilder) {
             translationBuilder.add(ROCK, "Rock");
             translationBuilder.add(TWIG, "Twig");
+            translationBuilder.add(FLINT_AXE, "Flint Axe");
+            translationBuilder.add(FLINT_HOE, "Flint Hoe");
+            translationBuilder.add(FLINT_PICKAXE, "Flint Pickaxe");
+            translationBuilder.add(FLINT_SHOVEL, "Flint Shovel");
+            translationBuilder.add(FLINT_SWORD, "Flint Sword");
             translationBuilder.add(GROUP, "Starting Revamp");
         }
     }
@@ -49,6 +55,11 @@ public class StartingRevampDataGen implements DataGeneratorEntrypoint {
         public void generateItemModels(ItemModelGenerator itemModelGenerator) {
             itemModelGenerator.register(ROCK, Models.GENERATED);
             itemModelGenerator.register(TWIG, Models.GENERATED);
+            itemModelGenerator.register(FLINT_AXE, Models.GENERATED);
+            itemModelGenerator.register(FLINT_HOE, Models.GENERATED);
+            itemModelGenerator.register(FLINT_PICKAXE, Models.GENERATED);
+            itemModelGenerator.register(FLINT_SHOVEL, Models.GENERATED);
+            itemModelGenerator.register(FLINT_SWORD, Models.GENERATED);
         }
     }
 }
