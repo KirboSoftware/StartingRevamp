@@ -20,6 +20,9 @@
   "entrypoints": {
     "main": [
       "com.joostmsoftware.startingrevamp.StartingRevamp"
+    ],
+    "fabric-datagen": [
+      "com.joostmsoftware.startingrevamp.util.StartingRevampDataGen"
     ]
   },
   "mixins": [
