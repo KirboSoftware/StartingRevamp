@@ -4,9 +4,9 @@
   "version": "${version}",
 
   "name": "Starting Revamp",
-  "description": "This is an example description! Tell everyone what your mod is about!",
+  "description": "Revamps the entire early game by making it harder and more enjoyable",
   "authors": [
-    "Me!"
+    "JoostMSoftware"
   ],
   "contact": {
     "homepage": "https://fabricmc.net/",
@@ -14,7 +14,7 @@
   },
 
   "license": "CC0-1.0",
-  "icon": "assets/modid/icon.png",
+  "icon": "assets/startingrevamp/icon.png",
 
   "environment": "*",
   "entrypoints": {
