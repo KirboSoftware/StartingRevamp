@@ -1,5 +1,6 @@
 package com.joostmsoftware.startingrevamp.block;
 
+import com.joostmsoftware.startingrevamp.block.custom.TwigBlock;
 import com.joostmsoftware.startingrevamp.registry.StartingRevampBlockRegistry;
 import net.minecraft.block.Block;
 
