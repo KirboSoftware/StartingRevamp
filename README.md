@@ -1,9 +1,24 @@
-# Fabric Example Mod
+# Starting Revamp
+This is a mod aimed to revamp the early game in minecraft. Making it more challenging and more rewarding to do microtasks.  
 
-## Setup
+## RoadMap
 
-For setup instructions please see the [fabric wiki page](https://fabricmc.net/wiki/tutorial:setup) that relates to the IDE that you are using.
+- ### Beta-1:
+ 
+   This release contains the tools, recipes and the basic stuff to get the mandatory stuff going.
+
+- ### Beta-2: 
+
+   This release will contain the physics to interact with certain objects (punching wood, stone etc). 
+
+- ### Release 1.0:
+
+   Has all the stuff from the alpha/beta + some fixes here and there if there are. 
+
+- ### Release 1.1:
+
+   Has biome compat with twigs to make it more immersive to wander through those biomes. (BYG, promenade and Terrestria)
 
 ## License
 
-This template is available under the CC0 license. Feel free to learn from it and incorporate it in your own projects.
+Starting Revamp is under the MIT license. 
