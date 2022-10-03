@@ -11,7 +11,7 @@ import org.jetbrains.annotations.NotNull;
 
 import static com.joostmsoftware.startingrevamp.StartingRevamp.GROUP;
 import static com.joostmsoftware.startingrevamp.block.StartingRevampRocks.ROCK;
-import static com.joostmsoftware.startingrevamp.block.StartingRevampTwigs.OAK_TWIG;
+import static com.joostmsoftware.startingrevamp.block.StartingRevampTwigs.*;
 import static com.joostmsoftware.startingrevamp.item.StartingRevampToolItems.*;
 
 public class StartingRevampDataGen implements DataGeneratorEntrypoint {
@@ -31,6 +31,12 @@ public class StartingRevampDataGen implements DataGeneratorEntrypoint {
         public void generateTranslations(@NotNull TranslationBuilder translationBuilder) {
             translationBuilder.add(ROCK, "Rock");
             translationBuilder.add(OAK_TWIG, "Oak Twig");
+            translationBuilder.add(BIRCH_TWIG, "Birch Twig");
+            translationBuilder.add(DARK_OAK_TWIG, "Dark Oak Twig");
+            translationBuilder.add(ACACIA_TWIG, "Acacia Twig");
+            translationBuilder.add(SPRUCE_TWIG, "Spruce Twig");
+            translationBuilder.add(MANGROVE_TWIG, "Mangrove Twig");
+            translationBuilder.add(JUNGLE_TWIG, "Jungle Twig");
             translationBuilder.add(FLINT_AXE, "Flint Axe");
             translationBuilder.add(FLINT_HOE, "Flint Hoe");
             translationBuilder.add(FLINT_PICKAXE, "Flint Pickaxe");
@@ -50,6 +56,12 @@ public class StartingRevampDataGen implements DataGeneratorEntrypoint {
         public void generateBlockStateModels(@NotNull BlockStateModelGenerator blockStateModelGenerator) {
             blockStateModelGenerator.registerSimpleCubeAll(ROCK);
             blockStateModelGenerator.registerSimpleCubeAll(OAK_TWIG);
+            blockStateModelGenerator.registerSimpleCubeAll(DARK_OAK_TWIG);
+            blockStateModelGenerator.registerSimpleCubeAll(SPRUCE_TWIG);
+            blockStateModelGenerator.registerSimpleCubeAll(ACACIA_TWIG);
+            blockStateModelGenerator.registerSimpleCubeAll(BIRCH_TWIG);
+            blockStateModelGenerator.registerSimpleCubeAll(MANGROVE_TWIG);
+            blockStateModelGenerator.registerSimpleCubeAll(JUNGLE_TWIG);
         }
 
         @Override

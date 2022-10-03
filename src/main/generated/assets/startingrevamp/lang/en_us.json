@@ -1,6 +1,12 @@
 {
+  "block.startingrevamp.acacia_twig": "Acacia Twig",
+  "block.startingrevamp.birch_twig": "Birch Twig",
+  "block.startingrevamp.dark_oak_twig": "Dark Oak Twig",
+  "block.startingrevamp.jungle_twig": "Jungle Twig",
+  "block.startingrevamp.mangrove_twig": "Mangrove Twig",
   "block.startingrevamp.oak_twig": "Oak Twig",
   "block.startingrevamp.rock": "Rock",
+  "block.startingrevamp.spruce_twig": "Spruce Twig",
   "item.startingrevamp.flint_axe": "Flint Axe",
   "item.startingrevamp.flint_hoe": "Flint Hoe",
   "item.startingrevamp.flint_pickaxe": "Flint Pickaxe",
