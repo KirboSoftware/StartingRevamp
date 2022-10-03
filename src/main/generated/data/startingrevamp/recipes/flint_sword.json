@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "I": {
+      "item": "minecraft:stick"
+    },
+    "X": {
+      "item": "minecraft:flint"
+    }
+  },
+  "pattern": [
+    " X ",
+    " X ",
+    " I "
+  ],
+  "result": {
+    "item": "startingrevamp:flint_sword"
+  }
+}

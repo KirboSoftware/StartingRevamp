@@ -24,6 +24,9 @@ public class StartingRevamp implements ModInitializer {
     public static @NotNull Identifier ID(String path) {
         return new Identifier(MOD_ID, path);
     }
+    public static @NotNull Identifier COMMON_ID(String path) {
+        return new Identifier("c", path);
+    }
 
     public static final ItemGroup GROUP = FabricItemGroupBuilder.build(ID("group"), ()-> new ItemStack(ROCK));
 

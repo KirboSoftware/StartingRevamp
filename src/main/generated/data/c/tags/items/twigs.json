@@ -1,0 +1,12 @@
+{
+  "replace": false,
+  "values": [
+    "startingrevamp:acacia_twig",
+    "startingrevamp:oak_twig",
+    "startingrevamp:dark_oak_twig",
+    "startingrevamp:jungle_twig",
+    "startingrevamp:birch_twig",
+    "startingrevamp:spruce_twig",
+    "startingrevamp:mangrove_twig"
+  ]
+}

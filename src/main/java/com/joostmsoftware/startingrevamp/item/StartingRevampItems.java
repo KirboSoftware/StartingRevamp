@@ -5,7 +5,6 @@ import com.joostmsoftware.startingrevamp.block.StartingRevampRocks;
 import com.joostmsoftware.startingrevamp.block.StartingRevampTwigs;
 import com.joostmsoftware.startingrevamp.registry.StartingRevampItemRegistry;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
-import net.minecraft.block.Block;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 
@@ -18,6 +17,8 @@ public class StartingRevampItems {
 
     // items
     public static final Item ROCK;
+    public static final Item GRASS_VIBER;
+
     public static final Item OAK_TWIG;
     public static final Item DARK_OAK_TWIG;
     public static final Item SPRUCE_TWIG;
@@ -27,14 +28,16 @@ public class StartingRevampItems {
     public static final Item JUNGLE_TWIG;
 
     static {
+        GRASS_VIBER = new Item(new FabricItemSettings().group(StartingRevamp.GROUP));
         ROCK = new BlockItem(StartingRevampRocks.ROCK, new FabricItemSettings().group(StartingRevamp.GROUP));
-        OAK_TWIG = new BlockItem(StartingRevampTwigs.OAK_TWIG, new FabricItemSettings().group(StartingRevamp.GROUP));
-        DARK_OAK_TWIG = new BlockItem(StartingRevampTwigs.DARK_OAK_TWIG, new FabricItemSettings().group(StartingRevamp.GROUP));
-        BIRCH_TWIG = new BlockItem(StartingRevampTwigs.BIRCH_TWIG, new FabricItemSettings().group(StartingRevamp.GROUP));
+
         ACACIA_TWIG = new BlockItem(StartingRevampTwigs.ACACIA_TWIG, new FabricItemSettings().group(StartingRevamp.GROUP));
-        SPRUCE_TWIG = new BlockItem(StartingRevampTwigs.SPRUCE_TWIG, new FabricItemSettings().group(StartingRevamp.GROUP));
-        MANGROVE_TWIG = new BlockItem(StartingRevampTwigs.MANGROVE_TWIG, new FabricItemSettings().group(StartingRevamp.GROUP));
+        BIRCH_TWIG = new BlockItem(StartingRevampTwigs.BIRCH_TWIG, new FabricItemSettings().group(StartingRevamp.GROUP));
+        DARK_OAK_TWIG = new BlockItem(StartingRevampTwigs.DARK_OAK_TWIG, new FabricItemSettings().group(StartingRevamp.GROUP));
         JUNGLE_TWIG = new BlockItem(StartingRevampTwigs.JUNGLE_TWIG, new FabricItemSettings().group(StartingRevamp.GROUP));
+        MANGROVE_TWIG = new BlockItem(StartingRevampTwigs.MANGROVE_TWIG, new FabricItemSettings().group(StartingRevamp.GROUP));
+        OAK_TWIG = new BlockItem(StartingRevampTwigs.OAK_TWIG, new FabricItemSettings().group(StartingRevamp.GROUP));
+        SPRUCE_TWIG = new BlockItem(StartingRevampTwigs.SPRUCE_TWIG, new FabricItemSettings().group(StartingRevamp.GROUP));
 
         TWIGS.put("oak_twig", OAK_TWIG);
         TWIGS.put("dark_oak_twig", DARK_OAK_TWIG);
@@ -47,6 +50,7 @@ public class StartingRevampItems {
 
     public static void loadItems() {
         StartingRevampItemRegistry.registerItem("rock", ROCK);
+        StartingRevampItemRegistry.registerItem("grass_viber", GRASS_VIBER);
         TWIGS.forEach(StartingRevampItemRegistry::registerItem);
     }
 }
