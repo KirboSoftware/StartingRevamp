@@ -1,10 +1,10 @@
 {
+  "block.startingrevamp.oak_twig": "Oak Twig",
+  "block.startingrevamp.rock": "Rock",
   "item.startingrevamp.flint_axe": "Flint Axe",
   "item.startingrevamp.flint_hoe": "Flint Hoe",
   "item.startingrevamp.flint_pickaxe": "Flint Pickaxe",
   "item.startingrevamp.flint_shovel": "Flint Shovel",
   "item.startingrevamp.flint_sword": "Flint Sword",
-  "item.startingrevamp.rock": "Rock",
-  "item.startingrevamp.twig": "Twig",
   "itemGroup.startingrevamp.group": "Starting Revamp"
 }

@@ -1,5 +1,6 @@
 package com.joostmsoftware.startingrevamp;
 
+import com.joostmsoftware.startingrevamp.registry.StartingRevampBlockRegistry;
 import com.joostmsoftware.startingrevamp.registry.StartingRevampItemRegistry;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
@@ -28,8 +29,8 @@ public class StartingRevamp implements ModInitializer {
 
     @Override
     public void onInitialize() {
-
         StartingRevampItemRegistry.registerItems();
+        StartingRevampBlockRegistry.registerBlocks();
         LOGGER.info("Loaded everything from " + MOD_ID);
     }
 }

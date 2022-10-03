@@ -10,8 +10,8 @@ import net.minecraft.data.client.Models;
 import org.jetbrains.annotations.NotNull;
 
 import static com.joostmsoftware.startingrevamp.StartingRevamp.GROUP;
-import static com.joostmsoftware.startingrevamp.item.StartingRevampItems.ROCK;
-import static com.joostmsoftware.startingrevamp.item.StartingRevampItems.TWIG;
+import static com.joostmsoftware.startingrevamp.block.StartingRevampRocks.ROCK;
+import static com.joostmsoftware.startingrevamp.block.StartingRevampTwigs.OAK_TWIG;
 import static com.joostmsoftware.startingrevamp.item.StartingRevampToolItems.*;
 
 public class StartingRevampDataGen implements DataGeneratorEntrypoint {
@@ -28,9 +28,9 @@ public class StartingRevampDataGen implements DataGeneratorEntrypoint {
         }
 
         @Override
-        public void generateTranslations(TranslationBuilder translationBuilder) {
+        public void generateTranslations(@NotNull TranslationBuilder translationBuilder) {
             translationBuilder.add(ROCK, "Rock");
-            translationBuilder.add(TWIG, "Twig");
+            translationBuilder.add(OAK_TWIG, "Oak Twig");
             translationBuilder.add(FLINT_AXE, "Flint Axe");
             translationBuilder.add(FLINT_HOE, "Flint Hoe");
             translationBuilder.add(FLINT_PICKAXE, "Flint Pickaxe");
@@ -47,14 +47,13 @@ public class StartingRevampDataGen implements DataGeneratorEntrypoint {
         }
 
         @Override
-        public void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator) {
-
+        public void generateBlockStateModels(@NotNull BlockStateModelGenerator blockStateModelGenerator) {
+            blockStateModelGenerator.registerSimpleCubeAll(ROCK);
+            blockStateModelGenerator.registerSimpleCubeAll(OAK_TWIG);
         }
 
         @Override
-        public void generateItemModels(ItemModelGenerator itemModelGenerator) {
-            itemModelGenerator.register(ROCK, Models.GENERATED);
-            itemModelGenerator.register(TWIG, Models.GENERATED);
+        public void generateItemModels(@NotNull ItemModelGenerator itemModelGenerator) {
             itemModelGenerator.register(FLINT_AXE, Models.GENERATED);
             itemModelGenerator.register(FLINT_HOE, Models.GENERATED);
             itemModelGenerator.register(FLINT_PICKAXE, Models.GENERATED);
