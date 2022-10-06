@@ -19,6 +19,7 @@ public class StartingRevampToolItems {
     public static Item FLINT_PICKAXE = new StartingRevampPickaxeItem(StartingRevampToolMaterials.FLINT, 1, -2.8F, new FabricItemSettings().group(StartingRevamp.GROUP));
     public static Item FLINT_SHOVEL = new StartingRevampShovelItem(StartingRevampToolMaterials.FLINT, 1.0f, -3.0F, new FabricItemSettings().group(StartingRevamp.GROUP));
     public static Item FLINT_SWORD = new StartingRevampSwordItem(StartingRevampToolMaterials.FLINT, 1, -2.4F, new FabricItemSettings().group(StartingRevamp.GROUP));
+    public static Item FLINT_GRASS_CUTTERS = new StartingRevampGrassCutterItem(new FabricItemSettings().group(StartingRevamp.GROUP));
 
     static {
         FLINT_TOOLS.put("flint_axe", FLINT_AXE);
@@ -26,6 +27,7 @@ public class StartingRevampToolItems {
         FLINT_TOOLS.put("flint_pickaxe", FLINT_PICKAXE);
         FLINT_TOOLS.put("flint_shovel", FLINT_SHOVEL);
         FLINT_TOOLS.put("flint_sword", FLINT_SWORD);
+        FLINT_TOOLS.put("flint_grass_cutters", FLINT_GRASS_CUTTERS);
     }
 
     public static void loadTools() {

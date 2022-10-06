@@ -56,6 +56,7 @@ public class StartingRevampDataGen implements DataGeneratorEntrypoint {
             translationBuilder.add(FLINT_PICKAXE, "Flint Pickaxe");
             translationBuilder.add(FLINT_SHOVEL, "Flint Shovel");
             translationBuilder.add(FLINT_SWORD, "Flint Sword");
+            translationBuilder.add(FLINT_GRASS_CUTTERS, "Flint Grass Cutters");
             translationBuilder.add(GRASS_VIBER, "Grass Viber");
             translationBuilder.add(GROUP, "Starting Revamp");
         }
@@ -86,6 +87,7 @@ public class StartingRevampDataGen implements DataGeneratorEntrypoint {
             itemModelGenerator.register(FLINT_PICKAXE, Models.GENERATED);
             itemModelGenerator.register(FLINT_SHOVEL, Models.GENERATED);
             itemModelGenerator.register(FLINT_SWORD, Models.GENERATED);
+            itemModelGenerator.register(FLINT_GRASS_CUTTERS, Models.GENERATED);
             itemModelGenerator.register(GRASS_VIBER, Models.GENERATED);
         }
     }
@@ -173,6 +175,16 @@ public class StartingRevampDataGen implements DataGeneratorEntrypoint {
                     .criterion("has_flint", conditionsFromItem(Items.FLINT))
                     .offerTo(exporter);
 
+            ShapedRecipeJsonBuilder.create(FLINT_GRASS_CUTTERS)
+                    .pattern(" X ")
+                    .pattern("O  ")
+                    .pattern(" X ")
+                    .input('X', Items.FLINT)
+                    .input('O', Items.STRING)
+                    .criterion("has_flint", conditionsFromItem(Items.FLINT))
+                    .offerTo(exporter);
+
+            ShapelessRecipeJsonBuilder.create(Items.STRING).input(StartingRevampTags.WOOLS).criterion("has_wool", conditionsFromTag(StartingRevampTags.WOOLS)).offerTo(exporter);
             ShapelessRecipeJsonBuilder.create(Items.STICK).input(StartingRevampTags.TWIGS).criterion("has_twig", conditionsFromTag(StartingRevampTags.TWIGS)).offerTo(exporter);
         }
     }

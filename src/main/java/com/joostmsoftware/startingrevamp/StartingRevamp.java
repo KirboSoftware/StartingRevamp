@@ -2,6 +2,7 @@ package com.joostmsoftware.startingrevamp;
 
 import com.joostmsoftware.startingrevamp.registry.StartingRevampBlockRegistry;
 import com.joostmsoftware.startingrevamp.registry.StartingRevampItemRegistry;
+import com.joostmsoftware.startingrevamp.registry.StartingRevampLootTableRegistry;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
 import net.minecraft.item.ItemGroup;
@@ -34,6 +35,8 @@ public class StartingRevamp implements ModInitializer {
     public void onInitialize() {
         StartingRevampItemRegistry.registerItems();
         StartingRevampBlockRegistry.registerBlocks();
-        LOGGER.info("Loaded everything from " + MOD_ID);
+        StartingRevampLootTableRegistry.registerAdjustedLootTables();
+
+        LOGGER.info("Registered everything from " + MOD_ID);
     }
 }
