@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "I": {
+      "item": "minecraft:stick"
+    },
+    "O": {
+      "item": "startingrevamp:grass_viber"
+    },
+    "X": {
+      "item": "minecraft:flint"
+    }
+  },
+  "pattern": [
+    "XX ",
+    " O ",
+    " I "
+  ],
+  "result": {
+    "item": "startingrevamp:flint_hoe"
+  }
+}

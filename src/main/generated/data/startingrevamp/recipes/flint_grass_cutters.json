@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "O": {
+      "item": "minecraft:string"
+    },
+    "X": {
+      "item": "minecraft:flint"
+    }
+  },
+  "pattern": [
+    " X ",
+    "O  ",
+    " X "
+  ],
+  "result": {
+    "item": "startingrevamp:flint_grass_cutters"
+  }
+}

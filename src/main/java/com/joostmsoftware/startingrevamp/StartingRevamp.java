@@ -1,6 +1,8 @@
 package com.joostmsoftware.startingrevamp;
 
+import com.joostmsoftware.startingrevamp.registry.StartingRevampBlockRegistry;
 import com.joostmsoftware.startingrevamp.registry.StartingRevampItemRegistry;
+import com.joostmsoftware.startingrevamp.registry.StartingRevampLootTableRegistry;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
 import net.minecraft.item.ItemGroup;
@@ -23,13 +25,18 @@ public class StartingRevamp implements ModInitializer {
     public static @NotNull Identifier ID(String path) {
         return new Identifier(MOD_ID, path);
     }
+    public static @NotNull Identifier COMMON_ID(String path) {
+        return new Identifier("c", path);
+    }
 
     public static final ItemGroup GROUP = FabricItemGroupBuilder.build(ID("group"), ()-> new ItemStack(ROCK));
 
     @Override
     public void onInitialize() {
-
         StartingRevampItemRegistry.registerItems();
-        LOGGER.info("Loaded everything from " + MOD_ID);
+        StartingRevampBlockRegistry.registerBlocks();
+        StartingRevampLootTableRegistry.registerAdjustedLootTables();
+
+        LOGGER.info("Registered everything from " + MOD_ID);
     }
 }
