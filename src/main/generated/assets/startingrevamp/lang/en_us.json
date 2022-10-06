@@ -14,5 +14,7 @@
   "item.startingrevamp.flint_shovel": "Flint Shovel",
   "item.startingrevamp.flint_sword": "Flint Sword",
   "item.startingrevamp.grass_viber": "Grass Viber",
-  "itemGroup.startingrevamp.group": "Starting Revamp"
+  "itemGroup.startingrevamp.group": "Starting Revamp",
+  "tag.c.twigs": "Twigs",
+  "tag.c.wools": "Wools"
 }

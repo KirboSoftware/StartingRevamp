@@ -8,9 +8,7 @@ import net.minecraft.block.Blocks;
 import net.minecraft.loot.LootPool;
 import net.minecraft.loot.condition.MatchToolLootCondition;
 import net.minecraft.loot.entry.ItemEntry;
-import net.minecraft.loot.function.SetNameLootFunction;
 import net.minecraft.predicate.item.ItemPredicate;
-import net.minecraft.text.Text;
 
 public class StartingRevampLootTableRegistry {
 
@@ -24,7 +22,6 @@ public class StartingRevampLootTableRegistry {
                LootPool pool = LootPool.builder()
                        .with(ItemEntry.builder(StartingRevampItems.GRASS_VIBER).build())
                        .conditionally(MatchToolLootCondition.builder(ItemPredicate.Builder.create().items(StartingRevampToolItems.FLINT_GRASS_CUTTERS)).build())
-                       .apply(SetNameLootFunction.builder(Text.literal("grass viber from cutting grass with the flint grass cutters")).build())
                        .build();
 
                tableBuilder.pool(pool).build();

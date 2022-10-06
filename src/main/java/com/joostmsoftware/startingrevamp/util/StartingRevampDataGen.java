@@ -7,6 +7,7 @@ import net.fabricmc.fabric.api.datagen.v1.provider.FabricLanguageProvider;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
+import net.fabricmc.fabric.api.event.lifecycle.v1.CommonLifecycleEvents;
 import net.minecraft.data.client.BlockStateModelGenerator;
 import net.minecraft.data.client.ItemModelGenerator;
 import net.minecraft.data.client.Models;
@@ -18,6 +19,8 @@ import net.minecraft.item.Items;
 import net.minecraft.util.registry.Registry;
 import org.jetbrains.annotations.NotNull;
 
+import java.io.IOException;
+import java.nio.file.Path;
 import java.util.function.Consumer;
 
 import static com.joostmsoftware.startingrevamp.StartingRevamp.GROUP;
@@ -59,6 +62,13 @@ public class StartingRevampDataGen implements DataGeneratorEntrypoint {
             translationBuilder.add(FLINT_GRASS_CUTTERS, "Flint Grass Cutters");
             translationBuilder.add(GRASS_VIBER, "Grass Viber");
             translationBuilder.add(GROUP, "Starting Revamp");
+
+            try {
+                Path existingFile = dataGenerator.getModContainer().findPath("assets/startingrevamp/lang/en_us.existing.json").get();
+                translationBuilder.add(existingFile);
+            } catch (IOException e) {
+                throw new RuntimeException("Failed to add existing language file!", e);
+            }
         }
     }
 
@@ -115,6 +125,24 @@ public class StartingRevampDataGen implements DataGeneratorEntrypoint {
                     .add(StartingRevampItems.BIRCH_TWIG)
                     .add(StartingRevampItems.SPRUCE_TWIG)
                     .add(StartingRevampItems.MANGROVE_TWIG);
+
+            getOrCreateTagBuilder(StartingRevampTags.WOOLS)
+                    .add(Items.WHITE_WOOL)
+                    .add(Items.BLACK_WOOL)
+                    .add(Items.BLUE_WOOL)
+                    .add(Items.CYAN_WOOL)
+                    .add(Items.GRAY_WOOL)
+                    .add(Items.BROWN_WOOL)
+                    .add(Items.GREEN_WOOL)
+                    .add(Items.LIGHT_BLUE_WOOL)
+                    .add(Items.LIGHT_GRAY_WOOL)
+                    .add(Items.LIME_WOOL)
+                    .add(Items.MAGENTA_WOOL)
+                    .add(Items.ORANGE_WOOL)
+                    .add(Items.PINK_WOOL)
+                    .add(Items.PURPLE_WOOL)
+                    .add(Items.RED_WOOL)
+                    .add(Items.YELLOW_WOOL);
         }
     }
 
